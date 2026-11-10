@@ -1,0 +1,11 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "纯前端番茄钟应用：专注 25 分钟、短休息 5 分钟、每 4 轮后长休息 15 分钟。",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "start": "npx --yes serve ."
+  },
+  "license": "MIT"
+}

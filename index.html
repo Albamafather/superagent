@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>番茄钟</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="header">
+      <h1>🍅 番茄钟</h1>
+      <p class="stats" id="stats">已完成专注 0 次 · 完整循环 0 个</p>
+    </header>
+
+    <nav class="modes" id="modes" aria-label="模式切换">
+      <button class="mode-btn" data-mode="work" type="button">专注</button>
+      <button class="mode-btn" data-mode="shortBreak" type="button">短休息</button>
+      <button class="mode-btn" data-mode="longBreak" type="button">长休息</button>
+    </nav>
+
+    <section class="timer" id="timer" aria-live="polite">
+      <p class="session-label" id="session-label">专注</p>
+      <p class="time" id="time">25:00</p>
+    </section>
+
+    <div class="controls">
+      <button id="start-pause" class="btn primary" type="button">开始</button>
+      <button id="reset" class="btn" type="button">重置</button>
+      <button id="skip" class="btn" type="button">跳过</button>
+    </div>
+
+    <footer class="tips">
+      <p>专注 25 分钟 · 短休息 5 分钟 · 每 4 轮后长休息 15 分钟</p>
+    </footer>
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
