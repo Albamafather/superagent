@@ -1,7 +1,7 @@
 import { createTimer, tick, start, pause, skip, reset, currentSession, formatTime, CYCLE } from './timer.js';
 import {
   createTodoStore, addTodo, toggleTodo, deleteTodo, renameTodo, addPomodoro,
-  setActiveTodo, activeTodo, setFilter, visibleTodos, counts, clearDone, FILTERS,
+  setActiveTodo, activeTodo, setFilter, visibleTodos, counts, clearDone,
 } from './todos.js';
 
 const els = {
