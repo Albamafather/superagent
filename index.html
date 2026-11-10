@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>番茄钟</title>
+  <title>番茄钟 · 待办</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="app" id="app">
     <header class="header">
-      <h1>🍅 番茄钟</h1>
+      <h1>🍅 番茄钟 · 待办</h1>
       <p class="stats" id="stats">已完成专注 0 次 · 完整循环 0 个</p>
     </header>
 
@@ -29,6 +29,25 @@
       <button id="reset" class="btn" type="button">重置</button>
       <button id="skip" class="btn" type="button">跳过</button>
     </div>
+
+    <section class="todos" id="todos" aria-label="待办清单">
+      <div class="todos-header">
+        <h2>待办清单</h2>
+        <span class="todo-count" id="todo-count">0 项待办</span>
+      </div>
+      <p class="active-todo" id="active-todo" hidden>当前专注：<span id="active-todo-name"></span><button id="clear-active" class="link-btn" type="button">取消关联</button></p>
+      <form class="todo-form" id="todo-form">
+        <input id="todo-input" type="text" placeholder="添加待办，回车确认" maxlength="100" aria-label="新待办" />
+        <button class="btn small primary" type="submit">添加</button>
+      </form>
+      <div class="todo-filters" id="todo-filters" role="tablist" aria-label="筛选">
+        <button class="filter-btn active" data-filter="all" type="button">全部</button>
+        <button class="filter-btn" data-filter="active" type="button">进行中</button>
+        <button class="filter-btn" data-filter="done" type="button">已完成</button>
+        <button id="clear-done" class="link-btn" type="button">清除已完成</button>
+      </div>
+      <ul class="todo-list" id="todo-list"></ul>
+    </section>
 
     <footer class="tips">
       <p>专注 25 分钟 · 短休息 5 分钟 · 每 4 轮后长休息 15 分钟</p>
